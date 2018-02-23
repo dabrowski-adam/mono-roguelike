@@ -20,9 +20,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Reference Include="mono-curses">
-      <HintPath>lib/mono-curses.dll</HintPath>
-    </Reference>
+    <Reference Include="lib/mono-curses.dll" />
   </ItemGroup>
 
   <Target Name="Clean">
@@ -32,13 +30,18 @@
   <Target Name="Build">
     <CallTarget Targets="Clean" />
     <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
-    <Fsc Sources="@(Compile)" OutputAssembly="$(OutputPath)/roguelike.exe" />
+    <Copy
+       SourceFiles="@(Reference)"
+       DestinationFolder="$(OutputPath)"
+    />
+    <Fsc References="@(Reference)" Sources="@(Compile)" OutputAssembly="$(OutputPath)/roguelike.exe" />
   </Target>  
 
   <Target Name="Print">  
     <Message Text="Configuration is $(Configuration)" />  
     <Message Text="MSBuildToolsPath is $(MSBuildToolsPath)" />  
     <Message Text="MSBuildExtensionsPath is $(MSBuildExtensionsPath)" />
+    <Message Text="ReferencePath is $(ReferencePath)" />
   </Target>  
   
 </Project>
