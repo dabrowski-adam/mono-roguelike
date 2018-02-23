@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2017.3/system/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_mono-curses.-122530082.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="AssemblyInfo.cs" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="binding.cs" t="Include" />
+      <e p="constants.cs" t="Include" />
+      <e p="gui.cs" t="Include" />
+      <e p="handles.cs" t="Include" />
+      <e p="mainloop.cs" t="Include" />
+      <e p="mono-curses.csproj" t="IncludeRecursive" />
+      <e p="mono-curses.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -1,0 +1,33 @@
+<Type Name="Curses+Screen" FullName="Unix.Terminal.Curses+Screen">
+  <TypeSignature Language="C#" Value="public class Curses.Screen" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit Curses/Screen extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>mono-curses</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public readonly IntPtr Handle;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly native int Handle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

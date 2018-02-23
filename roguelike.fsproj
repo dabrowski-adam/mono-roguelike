@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk" 
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Version>0.1.0-alpha</Version>
+    <Authors>Adam Dąbrowski</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputPath>build</OutputPath>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net40</TargetFramework>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets" />
+
+  <ItemGroup>
+    <Compile Include="src/roguelike.fs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="mono-curses">
+      <HintPath>lib/mono-curses.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="Clean">
+    <RemoveDir Directories="$(OutputPath)" />
+  </Target>
+  
+  <Target Name="Build">
+    <CallTarget Targets="Clean" />
+    <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
+    <Fsc Sources="@(Compile)" OutputAssembly="$(OutputPath)/roguelike.exe" />
+  </Target>  
+
+  <Target Name="Print">  
+    <Message Text="Configuration is $(Configuration)" />  
+    <Message Text="MSBuildToolsPath is $(MSBuildToolsPath)" />  
+    <Message Text="MSBuildExtensionsPath is $(MSBuildExtensionsPath)" />
+  </Target>  
+  
+</Project>
